@@ -1,0 +1,15 @@
+{
+  "name": "Jhoan Salvador",
+  "bio": "I'm Jhoan Salvador, currently studying IT with a focus on web development. I specialize in front-end technologies and I build modern, responsive websites using HTML, CSS, and JavaScript. I enjoy turning ideas into interactive digital experiences and experimenting with animations and UI design.",
+  "github": "https://github.com/nishimurajhaon07-ux",
+  "githubUsername": "nishimurajhaon07-ux",
+  "instagram": "https://www.instagram.com/salva_an07?igsh=ZWF3cmRtN3g2Njhy",
+  "email": "jhoan.salvador@example.com",
+  "avatar": "avatar.jpg",
+  "skills": ["HTML", "CSS", "JavaScript", "Node.js", "Git", "REST"],
+  "hobbies": ["Photography", "Hiking", "Open-source", "Cooking"],
+  "projects": [
+    {"title":"Personal Portfolio","description":"A small static site showing projects and blog posts.","tags":["HTML","CSS","JS"]},
+    {"title":"Task Timer","description":"A tiny productivity timer with local storage support.","tags":["JS","PWA"]}
+  ]
+}

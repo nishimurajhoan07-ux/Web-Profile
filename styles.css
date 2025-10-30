@@ -1,0 +1,164 @@
+:root{
+  --purple-1: #5b21b6; /* deep */
+  --purple-2: #7c3aed; /* mid */
+  --purple-3: #a78bfa; /* light */
+  --muted: #6b7280;
+  --card-shadow: 0 6px 18px rgba(16,24,40,.06);
+  --radius: 12px;
+  --container-max: 1100px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:#111827;
+  background:#f8fafc;
+  margin:0;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* navbar */
+.navbar-brand {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem; /* slightly larger per request */
+  background: linear-gradient(90deg, #8b5cf6, #5b21b6); /* tuned gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.6px;
+  text-transform: uppercase; /* make brand uppercase */
+  padding: 6px 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: transform .18s ease, opacity .18s ease;
+  text-shadow: 0 1px 6px rgba(92,33,182,0.08);
+}
+.navbar-brand:hover{ transform: translateY(-2px); opacity:0.96 }
+
+/* small emblem next to brand */
+.brand-emblem{width:36px;height:36px;display:inline-block;vertical-align:middle}
+
+@media (max-width: 767.98px){
+  .navbar-brand{font-size:3.25rem}
+  .brand-emblem{width:28px;height:28px}
+}
+
+.navbar { background: #fff; box-shadow: 0 1px 0 rgba(15,23,42,.04); }
+
+/* hero */
+.hero {
+  background: linear-gradient(135deg,var(--purple-1) 0%, var(--purple-2) 50%, var(--purple-3) 100%);
+  color: white;
+  padding: 6rem 0 4rem;
+  text-align:center;
+}
+.hero .lead { color: rgba(255,255,255,.9); font-size:1.05rem; max-width:900px; margin:0 auto 1.6rem; }
+
+/* container width control */
+.container-custom { max-width: var(--container-max); margin: 0 auto; padding: 2rem; }
+
+/* cards */
+.card {
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  border:0;
+}
+
+/* ensure circular profile images inside cards are centered */
+.card .rounded-circle{display:block;margin-left:auto;margin-right:auto}
+
+/* section titles */
+.section-title { text-align:center; margin-bottom:1.6rem; }
+.section-sub { color:var(--muted); margin-bottom:2.2rem; }
+
+/* tag badges */
+.badge-tag {
+  background: rgba(124,58,237,0.08);
+  color: var(--purple-2);
+  font-size: .78rem;
+  padding: 0.28rem .6rem;
+  border-radius: 999px;
+  margin-right: .4rem;
+  display:inline-block;
+}
+
+/* skills progress */
+.skill-label { font-weight:600; margin-bottom:.4rem; }
+.progress { height:10px; border-radius:999px; background:#e6e6f0; }
+
+/* footer */
+.footer {
+  background: #0f1724;
+  color: rgba(255,255,255,.85);
+  padding: 1.4rem 0;
+  margin-top: 3rem;
+}
+
+/* small screens tweak */
+@media (max-width: 767.98px){
+  .hero { padding: 4.5rem 0 3rem; }
+  .hero h1 { font-size:2rem; }
+  .container-custom { padding: 1rem; }
+}
+
+/* utility */
+.mt-2 { margin-top:.5rem; }
+.mb-2 { margin-bottom:.5rem; }
+.text-muted { color:var(--muted) !important; }
+
+/* active nav highlight (desktop) */
+.nav-link.active{ color: var(--purple-1) !important; font-weight:600; }
+
+/* nav hover — make menu items purple on hover */
+.navbar .nav-link:hover,
+.nav-link:hover{
+  color: var(--purple-2) !important;
+}
+
+/* social icons inserted by JS: size & spacing */
+.footer .social-icon{display:inline-block;width:18px;height:18px;vertical-align:middle;margin-right:8px;opacity:0.95}
+.footer .social-link{display:inline-flex;align-items:center;gap:6px}
+
+/* stronger override in case Bootstrap defaults take precedence */
+.navbar .navbar-brand{ font-size:1.9rem !important; }
+.navbar .brand-emblem{ width:42px !important; height:42px !important; }
+
+@media (max-width: 767.98px){
+  .navbar .navbar-brand{ font-size:1.25rem !important; }
+  .navbar .brand-emblem{ width:28px !important; height:28px !important; }
+}
+
+/* contact form style */
+.form-card { padding:1.2rem; }
+
+/* portfolio images placeholder */
+.project-thumb {
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-top-left-radius: calc(var(--radius) - 4px);
+  border-top-right-radius: calc(var(--radius) - 4px);
+}
+
+/* small visual */
+.kpi-box { border-radius:8px; background:linear-gradient(180deg,rgba(124,58,237,0.06), rgba(167,139,250,0.03)); padding:1rem; text-align:center; }
+.kpi-num { font-weight:700; font-size:1.2rem; color:var(--purple-1); }
+
+/* subtle card spacing */
+.section-grid { gap:1.2rem; display:grid; grid-template-columns: repeat(2,1fr); }
+@media (max-width: 767.98px){ .section-grid { grid-template-columns: 1fr; } }
+
+/* small link btn */
+.btn-outline-purple {
+  color:var(--purple-2);
+  border-color: rgba(124,58,237,0.18);
+  background: transparent;
+}
+.btn-primary-purple {
+  background: linear-gradient(90deg,var(--purple-2),var(--purple-1));
+  border:0;
+  color:#fff;
+}
